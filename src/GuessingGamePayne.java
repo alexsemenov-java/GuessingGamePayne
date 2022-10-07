@@ -39,7 +39,7 @@ public class GuessingGamePayne extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnNewButton.setBounds(153, 110, 107, 38);
+		btnNewButton.setBounds(153, 135, 107, 38);
 		getContentPane().add(btnNewButton);
 		
 		JLabel lblNewLabel_2 = new JLabel("Здесь будет ответ");
