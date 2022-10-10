@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 
 public class GuessingGamePayne extends JFrame {
 	private JTextField textUser;
+	private JLabel lblOutput;
 	public GuessingGamePayne() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Игра Угадай число");
