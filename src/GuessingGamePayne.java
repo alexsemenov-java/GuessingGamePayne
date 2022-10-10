@@ -10,8 +10,22 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class GuessingGamePayne extends JFrame {
-	private JTextField textUser;
+	private JTextField txtUser;
 	private JLabel lblOutput;
+	private int hiddenNumber;
+	public void checkNumber () {
+		String userText = txtUser.getText();
+		String message = "";
+		int userNumber = Integer.parseInt(userText);
+		if (userNumber < hiddenNumber)
+			message = userNumber + " слишком маленькое! Введите число больше." ;
+		else if (userNumber > hiddenNumber)
+			message = userNumber + " слишком большое! Введите число меньше.";
+		else 
+			message = userNumber + " это верное число! Вы победили";
+		lblOutput.setText(message);
+		
+	}
 	public GuessingGamePayne() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Игра Угадай число");
@@ -29,10 +43,10 @@ public class GuessingGamePayne extends JFrame {
 		lblNewLabel_1.setBounds(22, 36, 198, 38);
 		getContentPane().add(lblNewLabel_1);
 		
-		textUser = new JTextField();
-		textUser.setBounds(242, 36, 97, 38);
-		getContentPane().add(textUser);
-		textUser.setColumns(10);
+		txtUser = new JTextField();
+		txtUser.setBounds(242, 36, 97, 38);
+		getContentPane().add(txtUser);
+		txtUser.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Ответить");
 		btnNewButton.setFont(new Font("Times New Roman", Font.PLAIN, 15));
@@ -43,7 +57,7 @@ public class GuessingGamePayne extends JFrame {
 		btnNewButton.setBounds(153, 135, 107, 38);
 		getContentPane().add(btnNewButton);
 		
-		JLabel lblOutput = new JLabel("Здесь будет ответ");
+		lblOutput = new JLabel("Здесь будет ответ");
 		lblOutput.setFont(new Font("Times New Roman", Font.ITALIC, 15));
 		lblOutput.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOutput.setBounds(11, 184, 390, 38);
