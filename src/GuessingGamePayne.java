@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class GuessingGamePayne extends JFrame {
-	private JTextField textField;
+	private JTextField textUser;
 	public GuessingGamePayne() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Игра Угадай число");
@@ -28,10 +28,10 @@ public class GuessingGamePayne extends JFrame {
 		lblNewLabel_1.setBounds(22, 36, 198, 38);
 		getContentPane().add(lblNewLabel_1);
 		
-		textField = new JTextField();
-		textField.setBounds(242, 36, 97, 38);
-		getContentPane().add(textField);
-		textField.setColumns(10);
+		textUser = new JTextField();
+		textUser.setBounds(242, 36, 97, 38);
+		getContentPane().add(textUser);
+		textUser.setColumns(10);
 		
 		JButton btnNewButton = new JButton("Ответить");
 		btnNewButton.setFont(new Font("Times New Roman", Font.PLAIN, 15));
@@ -42,11 +42,11 @@ public class GuessingGamePayne extends JFrame {
 		btnNewButton.setBounds(153, 135, 107, 38);
 		getContentPane().add(btnNewButton);
 		
-		JLabel lblNewLabel_2 = new JLabel("Здесь будет ответ");
-		lblNewLabel_2.setFont(new Font("Times New Roman", Font.ITALIC, 15));
-		lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_2.setBounds(22, 184, 390, 38);
-		getContentPane().add(lblNewLabel_2);
+		JLabel lblOutput = new JLabel("Здесь будет ответ");
+		lblOutput.setFont(new Font("Times New Roman", Font.ITALIC, 15));
+		lblOutput.setHorizontalAlignment(SwingConstants.CENTER);
+		lblOutput.setBounds(11, 184, 390, 38);
+		getContentPane().add(lblOutput);
 	}
 
 	public static void main(String[] args) {
