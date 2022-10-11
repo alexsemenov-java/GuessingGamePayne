@@ -3,6 +3,8 @@ import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 import javax.swing.SwingConstants;
+
+import java.awt.Dimension;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
@@ -76,7 +78,14 @@ public class GuessingGamePayne extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		GuessingGamePayne theGame = new GuessingGamePayne();
+		
+		theGame.newGame();
+		
+		theGame.setSize(new Dimension(450, 300));
+		
+		theGame.setVisible(true);
 
 	}
 }
