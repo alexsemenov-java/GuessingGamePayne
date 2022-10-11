@@ -14,6 +14,7 @@ public class GuessingGamePayne extends JFrame {
 	private JLabel lblOutput;
 	private int hiddenNumber;
 	public void checkNumber () {
+		
 		String userText = txtUser.getText();
 		String message = "";
 		int userNumber = Integer.parseInt(userText);
@@ -26,6 +27,13 @@ public class GuessingGamePayne extends JFrame {
 		lblOutput.setText(message);
 		
 	}
+	
+	public void newGame() {
+		
+		int hiddenNumber = (int)(Math.random() * 100 +1);
+		
+	}
+	
 	public GuessingGamePayne() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setTitle("Игра Угадай число");
@@ -52,6 +60,9 @@ public class GuessingGamePayne extends JFrame {
 		btnNewButton.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				checkNumber();
+				
 			}
 		});
 		btnNewButton.setBounds(153, 135, 107, 38);
